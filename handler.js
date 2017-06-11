@@ -11,7 +11,7 @@ const generateParams = helpers.generateParams
 const sendEmail = notification.sendEmail
 const ENV = process.env
 
-const clientConfig = `pg://${ENV.PSQL_USER}:${ENV.PSQL_PASSWORD}@${ENV.PSQL_URL}/${ENV.PSQL_DB_NAME}`
+const clientConfig = `pg://${ENV.DB_USER}:${ENV.DB_PASSWORD}@${ENV.DB_URL}/${ENV.DB_NAME}`
 const client = new pg.Client(clientConfig)
 
 const getLastRecord = async(() => {
@@ -50,10 +50,6 @@ const processData = (saved_days, current_days) => {
   let saved_days_tracking_month = saved_days[ENV.TRACKING_MONTH]
   let current_days_tracking_month = current_days[ENV.TRACKING_MONTH]
   let needSave = false
-
-  console.log("current_days", current_days)
-
-  console.log("current_days_tracking_month", current_days_tracking_month)
 
   if (!saved_days_tracking_month && current_days_tracking_month) {
     needSave = true
