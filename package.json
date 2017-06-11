@@ -1,0 +1,13 @@
+{
+  "name": "firm-checker",
+  "version": "1.0.0",
+  "description": "firm checker",
+  "author": "Pavel",
+  "license": "MIT",
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.1",
+    "pg": "^6.2.3"
+  }
+}
