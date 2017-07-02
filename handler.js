@@ -26,9 +26,9 @@ const getLastRecord = async(() => {
 
 const makeRequest = async(() => {
   let options = {
-    "service_ids[]": 855817,
+    "service_ids[]": ENV.SERVICE_ID,
     "staff_id": ENV.BARBER_ID,
-    "date": `${ENV.TRACKING_YEAR}-${ENV.TRACKING_MONTH}-01`
+    "date": `${ENV.TRACKING_YEAR}-${ENV.TRACKING_MONTH}-${ENV.TRACKING_DAY}`
   }
   let params = generateParams(options)
 

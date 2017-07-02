@@ -1,3 +1,3 @@
-`serverless deploy` - deploy function
+`yarn deploy` - deploy function
 
-`serverless remove` - destroy function
+`yarn remove` - destroy function
