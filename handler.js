@@ -8,7 +8,7 @@ const helpers = require('./lib/helpers')
 const notification = require('./lib/notification')
 
 const generateParams = helpers.generateParams
-const sendTelegramMessage = notification.sendTelegramMessage
+const sendTelegramCM = notification.sendTelegramCM
 const ENV = process.env
 
 const clientConfig = `pg://${ENV.DB_USER}:${ENV.DB_PASSWORD}@${ENV.DB_URL}/${ENV.DB_NAME}`
@@ -65,7 +65,7 @@ const processData = (saved_days, current_days) => {
   }
 
   if (notificationData) {
-    sendTelegramMessage(notificationData)
+    sendTelegramCM(notificationData)
   }
 
   if (needSave) {
